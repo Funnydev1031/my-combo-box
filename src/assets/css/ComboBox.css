@@ -1,0 +1,45 @@
+.combo-box {
+  position: relative;
+  width: fit-content;
+}
+
+.input-box {
+  background-color: #f5f5f5;
+  border-radius: 0.2rem;
+  height: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.options-list {
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.option-item {
+  cursor: pointer;
+  height: 1.5rem;
+  list-style: none;
+  text-align: left;
+}
+
+.option-item:hover {
+  background-color: gainsboro;
+}
+
+.option-icon {
+  margin-right: 0.5rem;
+}
+
+.icon {
+  position: absolute;
+  top: 0.75rem;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.icon svg {
+  fill: #000;
+  width: 20px;
+  height: 20px;
+}

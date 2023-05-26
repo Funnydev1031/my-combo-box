@@ -11,7 +11,7 @@ describe("App", () => {
 
   test("selects an option from the combo box", () => {
     render(<App />);
-    const inputElement = screen.getByPlaceholderText("Select an option");
+    const inputElement = screen.getByPlaceholderText("Choose a Fruit");
 
     fireEvent.click(inputElement);
     const optionElement = screen.getByText("Apple");

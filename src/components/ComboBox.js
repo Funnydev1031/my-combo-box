@@ -1,6 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
+import { ReactComponent as DownArrowIcon } from "../assets/images/down-arrow.svg";
+import { ReactComponent as AppleIcon } from "../assets/images/apple.svg";
+import { ReactComponent as BananaIcon } from "../assets/images/banana.svg";
+import { ReactComponent as BlueberryIcon } from "../assets/images/blueberry.svg";
+import { ReactComponent as MangoIcon } from "../assets/images/mango.svg";
+import "../assets/css/ComboBox.css";
 
 const options = ["Apple", "Banana", "Blueberry", "Mango"];
+
+const fruitIcons = {
+  Apple: AppleIcon,
+  Banana: BananaIcon,
+  Blueberry: BlueberryIcon,
+  Mango: MangoIcon,
+};
 
 const ComboBox = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -63,19 +76,26 @@ const ComboBox = () => {
         autoComplete="off"
         ref={inputRef}
       />
+      <div className="icon" onClick={toggleDropdown}>
+        <DownArrowIcon />
+      </div>
       {isOpen && (
         <ul className="options-list">
-          {filteredOptions.map((option) => (
-            <li
-              key={option}
-              className="option-item"
-              role="option"
-              aria-selected={option === selectedOption}
-              onClick={() => handleOptionClick(option)}
-            >
-              {option}
-            </li>
-          ))}
+          {filteredOptions.map((option) => {
+            const FruitIcon = fruitIcons[option];
+            return (
+              <li
+                key={option}
+                className="option-item"
+                role="option"
+                aria-selected={option === selectedOption}
+                onClick={() => handleOptionClick(option)}
+              >
+                {FruitIcon && <FruitIcon className="option-icon" />}
+                {option}
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>

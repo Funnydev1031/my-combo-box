@@ -1,10 +1,27 @@
-# Getting Started with Create React App
+### ComboBox Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The ComboBox component is a custom implementation of a combo box UI element built using React. It combines a drop-down list and an input text field, allowing the user to select a value from the list or start typing to narrow down the available options.
 
-## Available Scripts
+### Features
 
-In the project directory, you can run:
+Dropdown list with selectable options
+Input text field for filtering options
+Support for keyboard, touch, and other input methods
+Auto-closing when interacting with other elements
+Accessibility features
+Animations
+Responsive design for small screens
+
+### Installation
+
+1. Clone the repository:
+   git clone git@github.com:Funnydev1031/my-combo-box.git
+
+2. Change into the project directory:
+   cd comboBox
+
+3. Install the dependencies:
+   npm install
 
 ### `npm start`
 
